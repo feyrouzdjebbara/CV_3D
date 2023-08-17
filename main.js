@@ -16,7 +16,7 @@ camera.position.setZ(30)
 const geometry = new THREE.TorusGeometry(10, 1.5, 16, 100); // Decrease the tube radius
 const material = new THREE.MeshPhysicalMaterial({
    color: 0x9913CF,
-  metalness: 0.95, // Full metalness
+  metalness: 0.7, // Full metalness
   roughness: 0.2, // Adjust the roughness to control reflections
 });
 const torus = new THREE.Mesh(geometry, material);
