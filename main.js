@@ -50,7 +50,7 @@ Array(400).fill().forEach(addStars)
 //const spaceTexture =new THREE.TextureLoader().load('space1.jpg')
 //scene.background=spaceTexture
 
-const feyrouztexture =new THREE.TextureLoader().load('/feyrouz.jpeg')
+const feyrouztexture =new THREE.TextureLoader().load('img/feyrouz.jpeg')
 
 const feyrouz =new THREE.Mesh(
   new THREE.BoxGeometry(7,7,7),
@@ -58,8 +58,8 @@ const feyrouz =new THREE.Mesh(
 )
 scene.add(feyrouz)
 
-const moonTexture =new THREE.TextureLoader().load('/moon.jpg')
-const moondetails =new THREE.TextureLoader().load('/normal.jpg')
+const moonTexture =new THREE.TextureLoader().load('img/moon.jpg')
+const moondetails =new THREE.TextureLoader().load('img/normal.jpg')
 const moon =new THREE.Mesh(
   new THREE.SphereGeometry(5,32,32),
   new THREE.MeshBasicMaterial({ 
