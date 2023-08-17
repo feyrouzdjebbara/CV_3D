@@ -50,7 +50,7 @@ Array(400).fill().forEach(addStars)
 //const spaceTexture =new THREE.TextureLoader().load('space1.jpg')
 //scene.background=spaceTexture
 
-const feyrouztexture =new THREE.TextureLoader().load('feyrouz.jpeg')
+const feyrouztexture =new THREE.TextureLoader().load('./img/feyrouz.jpeg')
 
 const feyrouz =new THREE.Mesh(
   new THREE.BoxGeometry(7,7,7),
@@ -58,8 +58,8 @@ const feyrouz =new THREE.Mesh(
 )
 scene.add(feyrouz)
 
-const moonTexture =new THREE.TextureLoader().load('moon.jpg')
-const moondetails =new THREE.TextureLoader().load('normal.jpg')
+const moonTexture =new THREE.TextureLoader().load('./img/moon.jpg')
+const moondetails =new THREE.TextureLoader().load('./img/normal.jpg')
 const moon =new THREE.Mesh(
   new THREE.SphereGeometry(5,32,32),
   new THREE.MeshBasicMaterial({ 
@@ -70,8 +70,41 @@ const moon =new THREE.Mesh(
 
 scene.add(moon)
 
-moon.position.z = 30;
-moon.position.setX(-10);
+moon.position.z = 10;
+moon.position.setX(+10);
+
+
+const earthTexture =new THREE.TextureLoader().load('./img/earth.jpg')
+const earthdetails =new THREE.TextureLoader().load('./img/normal.jpg')
+const earth =new THREE.Mesh(
+  new THREE.SphereGeometry(5,32,32),
+  new THREE.MeshBasicMaterial({ 
+    map :earthTexture ,
+    normalMap:earthdetails
+  })
+)
+
+scene.add(earth)
+
+earth.position.z = 30;
+earth.position.setX(-10);
+
+const sunTexture =new THREE.TextureLoader().load('./img/sun.jpg')
+const sundetails =new THREE.TextureLoader().load('./img/normal.jpg')
+const sun =new THREE.Mesh(
+  new THREE.SphereGeometry(5,32,32),
+  new THREE.MeshBasicMaterial({ 
+    map :sunTexture ,
+    normalMap:sundetails
+  })
+)
+
+scene.add(sun)
+
+sun.position.z = 40;
+sun.position.setX(+10);
+
+
 
 feyrouz.position.z = -5;
 feyrouz.position.x = 2;
@@ -82,6 +115,14 @@ function moveCamera(){
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
+
+  earth.rotation.x += 0.05;
+  earth.rotation.y += 0.075;
+  earth.rotation.z += 0.05;
+
+  sun.rotation.x += 0.05;
+  sun.rotation.y += 0.075;
+  sun.rotation.z += 0.05;
 
   feyrouz.rotation.y += 0.01;
   feyrouz.rotation.z += 0.01;
