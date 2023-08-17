@@ -47,8 +47,8 @@ function addStars() {
 
 Array(400).fill().forEach(addStars)
 
-//const spaceTexture =new THREE.TextureLoader().load('space1.jpg')
-//scene.background=spaceTexture
+const spaceTexture =new THREE.TextureLoader().load('./space1.jpg')
+scene.background=spaceTexture
 
 const feyrouztexture =new THREE.TextureLoader().load('./img/feyrouz.jpeg')
 
